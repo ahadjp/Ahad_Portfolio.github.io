@@ -1,136 +1,734 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="images/name logo.png">
-    <title>Personal Portfolio</title>
-    <!---external css ---->
-    <link rel="stylesheet" href="style.css">
-    <!---font awesome cdn for font icons---->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description" content="Md Abdul Ahad is an IT engineer in Tokyo building web applications with JavaScript, PHP, Laravel and Docker.">
+
+<meta name="theme-color" content="#ffffff">
+
+<title>Md Abdul Ahad | IT Engineer, Tokyo</title>
+
+<link rel="icon" type="image/png" href="images/ahad-logo-dark.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+<link rel="stylesheet" href="style.css">
+
+<script>
+
+  // Apply saved or automatic theme before the page renders
+
+  (function () {
+
+    const saved = localStorage.getItem("portfolio-theme") || "auto";
+
+    const hour = new Date().getHours();
+
+    const theme = saved === "auto"
+
+      ? (hour >= 6 && hour < 18 ? "light" : "dark")
+
+      : saved;
+
+    document.documentElement.setAttribute("data-theme", theme);
+
+  })();
+
+</script>
+
 </head>
+
 <body>
-   <div class="container">
-       <div class="profile-card"> 
-            <div class="profile-pic">
-                <img src="images/ahad.jpg" width="210px">
-            </div>
 
-            <div class="profile-details">
-                 <div class="intro">
-                    <h2>Md Abdul Ahad</h2>
-                    <h4>Engineer</h4>
-                    <div class="social">
-                        <a href="https://www.facebook.com/farhan.jillo/" target="_blank" ><i class="fab fa-facebook" style="color:var(--blue)"></i></a>
-                        <a href="https://x.com/jillo_bd" target="_blank" ><i class="fab fa-twitter"  style="color:var(--skyblue)"></i></a>
-                        <a href="https://github.com/ahadjp" target="_blank" ><i class="fab fa-dribbble"  style="color:var(--dark-pink)"></i></a>
-                        <a href="https://www.linkedin.com/in/md-abdul-ahad-57b5a52b0/" target="_blank" ><i class="fab fa-linkedin"  style="color:var(--light-blue)"></i></a>
-                    </div>
-                 </div>
+<header class="nav">
 
-                 <div class="contact-info">
-                    <div class="row">
-                         <div class="icon">
-                            <i class="fa fa-phone"  style="color:var(--dark-magenta)"></i>
-                         </div>
-                         <div class="content">
-                            <span>Phone</span>
-                            <h5>+817028106233</h5>
-                         </div>
-                    </div>
+  <div class="wrap nav-in">
 
-                    <div class="row">
-                        <div class="icon">
-                           <i class="fa fa-envelope-open"  style="color:var(--light-green)"></i>
-                        </div>
-                        <div class="content">
-                           <span>Email</span>
-                           <h5>ajec.jillo@gmail.com</h5>
-                        </div>
-                   </div>
-    
-                   <div class="row">
-                    <div class="icon">
-                       <i class="fa fa-map-marker"  style="color:var(--light-purple)"></i>
-                    </div>
-                    <div class="content">
-                       <span>Location</span>
-                       <h5>Tokyo, Japan</h5>
-                    </div>
-                 </div>
+    <a href="#top" class="brand" aria-label="AHAD home">
+      <picture>
+        <source srcset="images/ahad-logo-light.png" media="(prefers-color-scheme: light)">
+        <img src="images/ahad-logo-dark.png" alt="AHAD logo">
+      </picture>
+    </a>
 
-            </div>
-               <button class="download-btn"> <i class="fa fa-download "></i> Download CV</button>
-            </div>
-       </div>
+    <div class="nav-actions">
 
-       <!----about section ----->
-       <div class="about">
-           <h1>About Me</h1>
+      <div class="theme-controls" aria-label="Theme selection">
 
-           <p> Hello! I am MD Abdul Ahad, currently residing and working in Japan, with a strong passion for technology and a clear goal of establishing a career as a full-stack engineer within the Japanese IT industry.
-My journey in information technology began in Bangladesh, where I studied at a specialized IT training center and gained foundational knowledge in web design and development. During this time, I also acquired hands-on experience through a part-time role at an IT company, where I worked with HTML, CSS, JavaScript, hardware repair, and OS installation.
-Although I am presently employed in the service industry, I remain deeply committed to my professional growth in tech. I actively enhance my technical skill set through self-paced online courses on platforms such as Udemy and engage in regular coding practice to stay current with industry standards.
-While I have not yet held a professional IT position in Japan, I am an entry-level candidate with a strong work ethic, adaptability, and a fast-learning mindset. I am confident in my ability to contribute effectively to a development team and thrive in a collaborative, forward-thinking environment. Additionally, my proficiency in both Japanese and English, along with my cultural understanding, allows me to integrate smoothly into diverse work settings.<br>
-Key Skills:<br>
+        <button type="button" data-theme-choice="auto" aria-label="Automatic theme" title="Automatic theme">
 
-Technologies used: HTML, CSS, JavaScript, Python, Web Design, OS Installation, Hardware Support, Microsoft Office<br>
+          <i class="fa fa-clock"></i>
 
-Soft Skills: Self-motivated, Quick Learner, Cross-Cultural Communication, Team Oriented<br>
+        </button>
 
-Currently Learning: Full Stack Development, Git, JavaScript Frameworks, and other modern web technologies.
-I am eager to bring my dedication and growing expertise to a professional IT role and contribute meaningfully to the success of a forward-looking organization.
-          </p>
+        <button type="button" data-theme-choice="light" aria-label="Light theme" title="Light theme">
 
-          <p>
-           My goal is to become a software engineer in the future. Please guide me and provide suggestions to help me achieve this.
-          </p>
-          <h2>I'm Passionate About !!!</h2>
-          <div class="work">
-             <div class="workbox">
-                 <div class="icon">
-                    <img src="images/system.svg" alt="System Engineering Icon">
-                 </div>
-                 <div class="desc">
-                    <h3>System Engineer</h3>
-                    <p>I am interested in learning about system engineering in the future.</p>
-                 </div>
-             </div>
+          <i class="fa fa-sun"></i>
 
-             <div class="workbox">
-                <div class="icon">
-                   <img src="images/system.svg" alt="Python Development Icon">
-                </div>
-                <div class="desc">
-                   <h3>Python Developement</h3>
-                   <p>I am also interested in learning Python development. </p>
-                </div>
-            </div>
-            <div class="workbox">
-                <div class="icon">
-                   <img src="images/Ai.svg" alt="AI Development Icon">
-                </div>
-                <div class="desc">
-                   <h3>AI Developement</h3>
-                   <p>AI development is expected to play a crucial role in the future, and I am eager to learn more about it.
+        </button>
 
-</p>
-                </div>
-            </div>
+        <button type="button" data-theme-choice="dark" aria-label="Dark theme" title="Dark theme">
 
-            <div class="workbox">
-                <div class="icon">
-                   <img src="images/web.svg" alt="Web Development Icon">
-                </div>
-                <div class="desc">
-                   <h3>Web Developement</h3>
-                   <p>Web development is important in nearly every sector, and I am interested in learning it.</p>
-                </div>
-            </div>
+          <i class="fa fa-moon"></i>
+
+        </button>
+
+      </div>
+
+      <label class="language-picker" aria-label="Choose language">
+        <i class="fa-solid fa-globe" aria-hidden="true"></i>
+        <select id="languageSelect" aria-label="Choose language">
+          <option value="auto">Auto detect</option>
+          <option value="en">English</option>
+          <option value="fr">Français</option>
+          <option value="de">Deutsch</option>
+          <option value="it">Italiano</option>
+          <option value="es">Español</option>
+          <option value="pt">Português</option>
+          <option value="ru">Русский</option>
+          <option value="tr">Türkçe</option>
+          <option value="nl">Nederlands</option>
+          <option value="sv">Svenska</option>
+          <option value="no">Norsk</option>
+          <option value="da">Dansk</option>
+          <option value="fi">Suomi</option>
+          <option value="pl">Polski</option>
+          <option value="bn">বাংলা</option>
+          <option value="hi">हिन्दी</option>
+          <option value="ar">العربية</option>
+          <option value="zh">中文</option>
+          <option value="ja">日本語</option>
+          <option value="ko">한국어</option>
+        </select>
+      </label>
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">
+
+        <i class="fa fa-bars"></i>
+
+      </button>
+
+    </div>
+
+    <nav id="menu">
+
+      <a href="#about">About</a>
+
+      <a href="#skills">Skills</a>
+
+      <a href="#experience">Experience</a>
+
+      <a href="#projects">Projects</a>
+
+      <a href="#education">Education</a>
+
+      <a href="#contact" class="nav-cta">Contact me</a>
+
+    </nav>
+
+  </div>
+
+</header>
+
+<main id="top">
+
+  <section class="hero">
+
+    <div class="wrap hero-in">
+
+      <div class="hero-text">
+
+        <p class="status" data-i18n="hero_status"><i></i> IT Engineer at Vuetech Co., Ltd. in Tokyo</p>
+
+        <h1 data-i18n="hero_title">I build web applications for the front end and the back end.</h1>
+
+        <p class="lead" data-i18n="hero_intro">
+
+          I am Md Abdul Ahad. I work with JavaScript, PHP, Laravel and Docker,
+
+          and I have been writing web code since 2015. I speak Bengali,
+
+          Japanese and English, so I work easily with teams in Japan and abroad.
+
+        </p>
+
+        <div class="btns">
+
+          <a class="btn primary" href="#contact">
+
+            <i class="fa fa-paper-plane"></i> Contact me
+
+          </a>
+
+          <a class="btn" href="#projects">
+
+            <i class="fa fa-folder-open"></i> See my work
+
+          </a>
+
+        </div>
+
+        <div class="social">
+
+          <a href="https://github.com/ahadjp" target="_blank" rel="noopener" aria-label="GitHub">
+
+            <i class="fab fa-github"></i>
+
+          </a>
+
+          <a href="https://www.linkedin.com/in/ahadjp/" target="_blank" rel="noopener" aria-label="LinkedIn">
+
+            <i class="fab fa-linkedin-in"></i>
+
+          </a>
+
+          <a href="https://x.com/jillo_bd" target="_blank" rel="noopener" aria-label="X">
+
+            <i class="fab fa-x-twitter"></i>
+
+          </a>
+
+          <a href="https://www.facebook.com/farhan.jillo/" target="_blank" rel="noopener" aria-label="Facebook">
+
+            <i class="fab fa-facebook-f"></i>
+
+          </a>
+
+        </div>
+
+      </div>
+
+      <div class="hero-side">
+
+        <img
+
+
+           class="photo"
+
+           src="image/Ahad.jpg"
+
+           alt="Portrait of Md Abdul Ahad"
+
+        >
+
+        <div class="code" aria-label="Summary of Ahad as code">
+
+          <div class="code-bar">
+
+            <b></b><b></b><b></b>
+
+            <span>ahad.js</span>
+
           </div>
-       </div>
-   </div>
+
+<pre><code><span class="k">const</span> ahad = {
+
+  role: <span class="s">"IT Engineer"</span>,
+
+  location: <span class="s">"Tokyo, Japan"</span>,
+
+  stack: [<span class="s">"JavaScript"</span>, <span class="s">"PHP"</span>,
+
+          <span class="s">"Laravel"</span>, <span class="s">"Docker"</span>],
+
+  languages: [<span class="s">"Bengali"</span>, <span class="s">"Japanese"</span>,
+
+              <span class="s">"English"</span>],
+
+  openToTalk: <span class="k">true</span>
+
+};</code></pre>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <section class="facts">
+
+    <div class="wrap facts-in">
+
+      <div>
+
+        <strong>10+ years</strong>
+
+        <span data-i18n="fact1">in IT, from Bangladesh to Japan</span>
+
+      </div>
+
+      <div>
+
+        <strong>12+ projects</strong>
+
+        <span data-i18n="fact2">delivered as a front end developer</span>
+
+      </div>
+
+      <div>
+
+        <strong>120% to 130%</strong>
+
+        <span data-i18n="fact3">of sales targets, every year</span>
+
+      </div>
+
+      <div>
+
+        <strong>3 languages</strong>
+
+        <span data-i18n="fact4">Bengali, Japanese, English</span>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <section id="about" class="sec">
+
+    <div class="wrap two">
+
+      <h2>About me</h2>
+
+      <div class="prose">
+
+        <p>
+
+          I got into web development in Bangladesh, where I worked as a front end
+
+          developer on more than 12 projects. Most of that work was landing pages,
+
+          templates and setting up development environments for the team.
+
+          In 2017 I moved to Japan, because I wanted to build my career in the IT industry here.
+
+        </p>
+
+        <p>
+
+          I studied application programming at Azuma Technical College.
+
+          After I graduated I worked at Haneda Airport, where I also led a team,
+
+          and later in mobile sales. Talking with customers all day taught me
+
+          to listen properly and explain things in plain words.
+
+          I still use that with teammates and clients.
+
+        </p>
+
+        <p>
+
+          Right now I am an IT engineer at Vuetech. My days are mostly PHP,
+
+          Laravel, jQuery and Docker, plus testing, debugging and improving
+
+          what we have built. I want to grow into a full stack engineer,
+
+          so I keep learning and practicing regularly outside of work too.
+
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <section id="skills" class="sec alt">
+
+    <div class="wrap">
+
+      <h2>Skills</h2>
+
+      <div class="grid skills">
+
+        <article>
+
+          <h3><i class="fa fa-code"></i> Front end</h3>
+
+          <ul class="tags">
+
+            <li>HTML</li><li>CSS</li><li>JavaScript</li>
+
+            <li>jQuery</li><li>Responsive design</li>
+
+          </ul>
+
+        </article>
+
+        <article>
+
+          <h3><i class="fa fa-server"></i> Back end</h3>
+
+          <ul class="tags">
+
+            <li>PHP</li><li>Laravel</li><li>Python</li>
+
+            <li>Java</li><li>SQL</li>
+
+          </ul>
+
+        </article>
+
+        <article>
+
+          <h3><i class="fa fa-screwdriver-wrench"></i> Tools and environments</h3>
+
+          <ul class="tags">
+
+            <li>Docker</li><li>Git</li><li>Windows</li>
+
+            <li>macOS</li><li>Linux</li><li>Command line</li>
+
+          </ul>
+
+        </article>
+
+        <article>
+
+          <h3><i class="fa fa-users"></i> Working with people</h3>
+
+          <ul class="tags">
+
+            <li>Team leadership</li><li>Documentation</li>
+
+            <li>Customer communication</li><li>Training others</li>
+
+          </ul>
+
+        </article>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <section id="experience" class="sec">
+
+    <div class="wrap">
+
+      <h2>Experience</h2>
+
+      <ol class="timeline">
+
+        <li>
+
+          <time>Oct 2026 to present</time>
+
+          <h3>IT Engineer, Web and Application Development</h3>
+
+          <p class="org">Vuetech Co., Ltd., Japan</p>
+
+          <ul>
+
+            <li>Build web applications across the front end and back end with HTML, CSS, JavaScript, jQuery, PHP and Laravel.</li>
+
+            <li>Design, test, debug and modify applications.</li>
+
+            <li>Set up and manage development environments with Docker on Windows, macOS and Linux.</li>
+
+          </ul>
+
+        </li>
+
+        <li>
+
+          <time>Sep 2025 to Sep 2026</time>
+
+          <h3>Mobile and Technology Sales Associate</h3>
+
+          <p class="org">Fellows Co., Ltd., Yodobashi Camera Multimedia Kinshicho, Tokyo</p>
+
+          <ul>
+
+            <li>Matched customers with smartphones, mobile plans, Wi-Fi products and computers.</li>
+
+            <li>Reached 120% to 130% of sales targets from the first year.</li>
+
+          </ul>
+
+        </li>
+
+        <li>
+
+          <time>Oct 2021 to Aug 2025</time>
+
+          <h3>Customer Support, Data Entry and Team Leader</h3>
+
+          <p class="org">Top Global Co., Ltd. (Swissport), Haneda Airport, Tokyo</p>
+
+          <ul>
+
+            <li>Supported international travelers and led a team by sharing instructions and guiding colleagues.</li>
+
+            <li>Followed reporting and escalation procedures to prevent errors and rework.</li>
+
+          </ul>
+
+        </li>
+
+        <li>
+
+          <time>Apr 2015 to 2017</time>
+
+          <h3>Front End Developer and IT Support</h3>
+
+          <p class="org">Base IT Solutions Ltd., Bangladesh</p>
+
+          <ul>
+
+            <li>Worked on more than 12 web projects, including landing pages, web templates and environment setup.</li>
+
+            <li>Handled hardware repair alongside development.</li>
+
+          </ul>
+
+        </li>
+
+      </ol>
+
+    </div>
+
+  </section>
+
+  <section id="projects" class="sec alt">
+
+    <div class="wrap">
+
+      <h2>Projects</h2>
+
+      <div class="grid projects">
+
+        <article>
+
+          <h3>Portfolio website</h3>
+
+          <p>This site. A responsive personal portfolio written in HTML, CSS and JavaScript.</p>
+
+          <ul class="tags"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
+
+          <a href="https://ahadjp.github.io/Ahad_Portfolio.github.io/" target="_blank" rel="noopener">View live site</a>
+
+        </article>
+
+        <article>
+
+          <h3>Travel booking website</h3>
+
+          <p>A booking site with interactive pages built from scratch.</p>
+
+          <ul class="tags"><li>JavaScript</li><li>HTML</li><li>CSS</li></ul>
+
+          <a href="https://github.com/ahadjp" target="_blank" rel="noopener">See on GitHub</a>
+
+        </article>
+
+        <article>
+
+          <h3>GitHub search website</h3>
+
+          <p>A clean search page modeled on GitHub, focused on layout and styling.</p>
+
+          <ul class="tags"><li>HTML</li><li>CSS</li></ul>
+
+          <a href="https://github.com/ahadjp" target="_blank" rel="noopener">See on GitHub</a>
+
+        </article>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <section id="education" class="sec">
+
+    <div class="wrap two">
+
+      <h2>Education and learning</h2>
+
+      <div class="prose">
+
+        <ul class="plain">
+
+          <li><strong>Application Programmer Program</strong><br>Azuma Technical College, Japan. Graduated March 2021.</li>
+
+          <li><strong>Japanese Language Studies</strong><br>Kokusho Japanese Language School, Japan. Completed April 2019.</li>
+
+          <li><strong>Higher Secondary Education</strong><br>Bhadshamia Adarsha H/S & College, Bangladesh. Graduated March 2015.</li>
+
+          <li><strong>Online courses</strong><br>Udemy courses in JavaScript, Python and Java.</li>
+
+          <li><strong>Test results</strong><br>TOEIC 650 (2019) and IELTS Academic 6.0 (2015).</li>
+
+        </ul>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <section id="contact" class="sec contact">
+
+    <div class="wrap">
+
+      <h2>Let's work together</h2>
+
+      <p class="lead">
+
+        Hiring for a web or application development role, or have a project in mind?
+
+        Send me a message and I will reply as soon as I can.
+
+      </p>
+
+      <div class="contact-grid">
+
+        <div class="cards">
+
+          <a class="card" href="mailto:ajec.jillo@gmail.com">
+
+            <i class="fa fa-envelope"></i>
+
+            <span>Email<b>ajec.jillo@gmail.com</b></span>
+
+          </a>
+
+          <a class="card" href="tel:+817028106233">
+
+            <i class="fa fa-phone"></i>
+
+            <span>Phone<b>+81 70 2810 6233</b></span>
+
+          </a>
+
+          <div class="card">
+
+            <i class="fa fa-location-dot"></i>
+
+            <span>Location<b>Tokyo, Japan</b></span>
+
+          </div>
+
+        </div>
+
+        <form id="contactForm" novalidate>
+
+          <label>Your name
+
+            <input type="text" id="name" autocomplete="name" required>
+
+          </label>
+
+          <label>Your email
+
+            <input type="email" id="email" autocomplete="email" required>
+
+          </label>
+
+          <label>Message
+
+            <textarea id="message" rows="5" required></textarea>
+
+          </label>
+
+          <p class="err" id="formMsg" role="alert"></p>
+
+          <button class="btn primary" type="submit">
+
+            <i class="fa fa-paper-plane"></i> Send message
+
+          </button>
+
+        </form>
+
+      </div>
+
+    </div>
+
+  </section>
+
+</main>
+
+<footer class="ahad-footer">
+  <div class="wrap">
+    <div class="footer-main">
+      <div class="footer-column">
+        <h4 data-i18n="footer_explore">Explore</h4>
+        <a href="#top" data-i18n="nav_home">Home</a>
+        <a href="#about" data-i18n="nav_about">About</a>
+        <a href="#skills" data-i18n="nav_skills">Skills</a>
+        <a href="#experience" data-i18n="nav_experience">Experience</a>
+        <a href="#projects" data-i18n="nav_projects">Projects</a>
+        <a href="#education" data-i18n="nav_education">Education</a>
+      </div>
+      <div class="footer-column">
+        <h4 data-i18n="footer_connect">Connect</h4>
+        <a href="mailto:ajec.jillo@gmail.com">Email</a>
+        <a href="tel:+817028106233">Phone</a>
+        <a href="https://linkedin.com/in/ahadjp" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/ahadjp" target="_blank" rel="noopener">GitHub</a>
+      </div>
+      <div class="footer-column footer-location">
+        <h4 data-i18n="footer_location">Location</h4>
+        <p>Tokyo, Japan</p>
+        <p data-i18n="footer_available">Available for opportunities</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-social">
+        <a href="https://linkedin.com/in/ahadjp" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="https://github.com/ahadjp" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+      </div>
+      <a href="#top" class="back-to-top" data-i18n="back_top">Back to top <i class="fa-solid fa-arrow-up"></i></a>
+      <p>© <span id="year"></span> Md Abdul Ahad. Tokyo, Japan.</p>
+      <p data-i18n="footer_care">Designed &amp; built with care.</p>
+    </div>
+  </div>
+</footer>
+
+<div id="photoGallery" class="gallery-overlay">
+
+  <div class="gallery-content">
+
+    <button class="gallery-close" onclick="closeGallery()" aria-label="Close gallery">×</button>
+
+    <h2>My Photos</h2>
+
+    <div class="gallery-images">
+
+      <img src="images/ahad.jpg" alt="Ahad Photo">
+
+      <img src="images/ahad2.jpg" alt="Ahad Photo">
+
+      <img src="images/ahad3.jpg" alt="Ahad Photo">
+
+    </div>
+
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+
 </body>
+
 </html>
